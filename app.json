@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classification/classification",
+    "pages/news/news",
+    "pages/user/user",
+    "pages/index/bangdan/bangdan",
+    "pages/details/details",
+    "pages/user/phoneLogin/phoneLogin",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarTitleText": "大家做良心事",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#ff520f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "排行榜",
+        "iconPath": "/image/icon/ic_rank_un_select.png",
+        "selectedIconPath": "/image/icon/ic_rank_select.png"
+      }
+      ,
+   
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "/image/icon/ic_news_un_select.png",
+        "selectedIconPath": "/image/icon/ic_news_select.png"
+      }
+     
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

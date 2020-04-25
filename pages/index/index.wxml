@@ -1,0 +1,36 @@
+<!-- index.wxml -->
+
+
+<!-- 有数据的时候显示 -->
+<block wx:if="{{showitem}}">
+  <view class="contentList">
+  
+    <block wx:for="{{xiaoshuocontent}}" wx:key="index">
+      <view class="content" bindtap="gotoDetails"  data-title="{{item.classcode}}">
+        <view class="contentImg">
+          <image src="/image/icon/ic_rank_un_select.png" mode="widthFix"></image>
+        </view> 
+        <view class="content-right">
+          <view class="content-title">
+            <view class="titleText">{{item.coursename}}</view>
+            <view class="introduction">{{item.name}}</view>
+          </view>
+          <!-- <view class="count">
+            <view class="playcount">
+  
+              126亿
+            </view>
+            <view class="jicount">{{item.tracks}}集</view>
+          </view> -->
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class="dataNotip">
+    <view class="tip">
+      网络暂时走丢了，请稍后再试
+    </view>  
+  </view>
+</block>
