@@ -9,30 +9,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgList:[
-      '/image/ad1.jpg',
-      '/image/ad2.jpg',
-      '/image/ad3.jpg',
-      '/image/ad4.jpg',
-      '/image/ad5.jpg',
-      '/image/ad6.jpg',
-      '/image/ad7.jpg'
-    ],
-    navList:[
-      {icon:'/image/nav-icon/diantai.png',events:'goToBangDan',text:'榜单'},
-      {icon:'/image/nav-icon/diantai.png',events:'goToBangDan',text:'听小说'},
-      {icon:'/image/nav-icon/diantai.png',events:'goToBangDan',text:'情感电台'},
-      {icon:'/image/nav-icon/diantai.png',events:'goToBangDan',text:'听知识'},
-      
-    ],
-    swiperCurrent: 0,
+    //  n_number:'29.3231565',
+    //  n_number:parseFloat(n_number).toFixed(1)
+  
+     
   },
-  //轮播图改变事件
-  swiperChange: function(e){
-    this.setData({
-     swiperCurrent: e.detail.current
-    })
-   },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  // onLoad: function (options) {
+  //   var that = this;
+  //   var n_number;
+  //   wx.getSystemInfo({
+  //     success (res) {
+  //       console.log(res.windowHeight);
+  //       height = res.windowHeight
+  //     }
+  //   })
+  //   if (app.globalData.userInfo === null){
+  //     that.setData({
+  //       login:true
+  //     })
+  //   }else{
+  //     that.setData({
+  //       login: false,
+  //       height:height
+  //     })
+  //   }
+  // },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -47,11 +53,10 @@ Page({
       success:function(result){
         that.setData({
           showitem:true,
-          // guess:result.data.paidArea.list,
-          // xiaoshuocontent:result.data.hotRecommends.list[0].list,
-          xiaoshuocontent:result.data.data,
-          // xiangshengcontent:result.data.hotRecommends.list[2].list,
-          // tuokocontent:result.data.hotRecommends.list[4].list
+    
+          rankcontent:result.data.data,
+          time_pro:Number(parseFloat(22589/10000*10).toFixed(1)),
+          
         })
       },
       fail:function(){
@@ -61,16 +66,5 @@ Page({
       }
     });
   },
-  // goToBangDan:function(){
-  //   wx.navigateTo({
-  //     url: '/pages/index/bangdan/bangdan',
-  //   })
-  // },
-  // gotoDetails(e){
-  //   var url = e.currentTarget.dataset.coverimg;
-  //   var title = e.currentTarget.dataset.title;
-  //   wx.navigateTo({
-  //     url: '/pages/details/details?url='+url+'&title='+title,
-  //   })
-  // }
+
 })

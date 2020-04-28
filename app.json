@@ -21,7 +21,7 @@
       },
       {
         "pagePath": "pages/news/news",
-        "text": "新闻",
+        "text": "村闻",
         "iconPath": "/image/ic_news_un_select.png",
         "selectedIconPath": "/image/ic_news_select.png"
       }

@@ -1,38 +1,44 @@
 <!-- index.wxml -->
 <!-- 有数据的时候显示 -->
 <block wx:if="{{showitem}}">
-  <view class="contentList">
-    <block wx:for="{{xiaoshuocontent}}" wx:key="index">
-      <view class="content" bindtap="gotoDetails"  data-title="{{item.classcode}}">
-        <view class="contentImg">
-          <block wx:if="{{index==0}}">
-           <image src="/image/rank_first.png" mode="widthFix"></image>
-          </block>
-           <block wx:if="{{index==1}}">
-           <image src="/image/rank_second.png" mode="widthFix"></image>
-          </block>
-           <block wx:if="{{index==2}}">
-           <image src="/image/rank_third.png" mode="widthFix"></image>
-          </block>
-          <block wx:else>
-            <image src="/image/rank_empty.png" mode="widthFix"></image>
-          </block>
-          
-        </view> 
-        <view class="content-right">
-          <view class="content-title">
-            <view class="titleText">{{item.coursename}}</view>
-            <view class="introduction">{{item.name}}</view>
-          </view>
-        </view>
-      </view>
-    </block>
+  <view class="lable-summary">
+  <view class="lable-target-donation">捐款进度:</view>
+   <view class="text-target">预设总额10万元</view>
   </view>
+  	
+	<view class="progress-box">
+		<progress percent="{{time_pro}}" color="#ff0000" show-info active stroke-width="10" />
+	</view>
+	<view class="contentList">
+		<block wx:for="{{rankcontent}}" wx:key="index">
+			<view class="content" bindtap="gotoDetails" data-title="{{item.classcode}}">
+				<view class="contentImg">
+					<block wx:if="{{index==0}}">
+						<image src="/image/rank_first.png" mode="widthFix"></image>
+					</block>
+					<block wx:if="{{index==1}}">
+						<image src="/image/rank_second.png" mode="widthFix"></image>
+					</block>
+					<block wx:if="{{index==2}}">
+						<image src="/image/rank_third.png" mode="widthFix"></image>
+					</block>
+					<block wx:else>
+						<image src="/image/rank_empty.png" mode="widthFix"></image>
+					</block>
+				</view>
+				<view class="content-right">
+					<view class="name">{{item.coursename}}</view>
+					<view class="donation_money">{{item.name}}</view>
+
+				</view>
+			</view>
+		</block>
+	</view>
 </block>
 <block wx:else>
-  <view class="dataNotip">
-    <view class="tip">
-      网络暂时走丢了，请稍后再试
-    </view>  
-  </view>
+	<view class="dataNotip">
+		<view class="tip">
+			网络暂时走丢了，请稍后再试
+		</view>
+	</view>
 </block>

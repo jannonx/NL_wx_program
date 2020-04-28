@@ -1,5 +1,53 @@
 
+
+
+.lable-summary{
+  display: flex;
+  flex-direction: row;
+  margin-right: 25rpx;
+  margin-top: 8rpx;
+  margin-bottom: 8rpx;
+  margin-left: 25rpx;
+}
+.lable-target-donation{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.lable-progress{
+  font-size: 14px;
+}
+
+.progress-box{
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-bottom: 30rpx;
+}
+
 .contentImg{
-  width: 80rpx;
-  height: 80rpx;
+  width: 100rpx;
+  height:100rpx;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10rpx;
+  margin-bottom: 5rpx;
+
+}
+
+.content-right{
+  margin-left: 20rpx;
+  height: 100rpx;
+}
+
+.name{
+  display: block;
+  flex-direction: row;
+  color: #111111;
+}
+.donation_money{
+  margin-top: 5rpx;
+  font-size: 12px;
+  color: #999999;
 }
