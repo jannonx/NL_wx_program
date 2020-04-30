@@ -3,7 +3,7 @@
 
 .lable-summary{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-right: 25rpx;
   margin-top: 8rpx;
   margin-bottom: 8rpx;

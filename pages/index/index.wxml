@@ -2,13 +2,16 @@
 <!-- 有数据的时候显示 -->
 <block wx:if="{{showitem}}">
   <view class="lable-summary">
-  <view class="lable-target-donation">捐款进度:</view>
-   <view class="text-target">预设总额10万元</view>
+  <!-- <view class="lable-target-donation">捐款进度:</view> -->
+   <!-- <view class="text-target">目标金额数：{{tartgetMoney}}元</view> -->
+  <!-- </view> -->
+	 <!-- <view class="lable-target-donation">捐款进度:</view> -->
+   <view class="text-target">现捐款所得：{{currentMoney}}元</view>
   </view>
-  	
-	<view class="progress-box">
-		<progress percent="{{time_pro}}" color="#ff0000" show-info active stroke-width="10" />
-	</view>
+  	<!--  progressTxt:Number(parseFloat(currentMoney/tartgetMoney*10).toFixed(1)), -->
+	<!-- <view class="progress-box">
+		<progress percent="{{currentMoney/currentMoney}}" color="#ff0000" show-info active stroke-width="10" />
+	</view> -->
 	<view class="contentList">
 		<block wx:for="{{rankcontent}}" wx:key="index">
 			<view class="content" bindtap="gotoDetails" data-title="{{item.classcode}}">
@@ -27,8 +30,8 @@
 					</block>
 				</view>
 				<view class="content-right">
-					<view class="name">{{item.coursename}}</view>
-					<view class="donation_money">{{item.name}}</view>
+					<view class="name">{{item.name}}</view>
+					<view class="donation_money">{{item.money}}</view>
 
 				</view>
 			</view>
